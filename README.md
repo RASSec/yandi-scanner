@@ -26,7 +26,7 @@ yandi-Scanner 是开源的网络安全检测工具，中小型企业内外网安
 
 ## 截图
 
-![1.png](images/1.png)
+![1.png](./images/1.png)
 ![2.png](images/2.png)
 ![3.png](images/3.png)
 ![4.png](images/4.png)
