@@ -1,0 +1,6 @@
+[console_scripts]
+pcs-attack = pocsuite.pocsuite_attack:main
+pcs-console = pocsuite.pocsuite_console:main
+pcs-verify = pocsuite.pocsuite_verify:main
+pocsuite = pocsuite.pocsuite_cli:main
+

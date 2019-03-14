@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% block css %}
+    <link href="static/css/duallistbox/bootstrap-duallistbox.css" rel="stylesheet">
+{% endblock %}
+{% block content %}
+<main class="app-content">
+    <div class="app-title">
+        <div>
+            <h1><i class="fa fa-th-list"></i>&nbsp; Log analysis </h1>
+            <p></p>
+        </div>
+        <ul class="app-breadcrumb breadcrumb side">
+            <li class="breadcrumb-item"><i class="fa fa-home fa-lg"></i></li>
+            <li class="breadcrumb-item">Home</li>
+            <li class="breadcrumb-item active"><a href="#"> Log analysis </a></li>
+        </ul>
+    </div>
+
+<script>
+
+function changeFrameHeight(){
+        var ifm= document.getElementById("mainiframe");
+        ifm.height=document.documentElement.clientHeight-56;
+    }
+    window.onresize=function(){ changeFrameHeight();}
+    $(function(){changeFrameHeight();});
+
+</script>
+ <iframe id="mainiframe" width="100%" height="600" src="//192.168.231.82/index.php"  frameborder="0" scrolling="auto"></iframe>
+</main>
+
+{% endblock %}

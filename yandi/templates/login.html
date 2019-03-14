@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Main CSS-->
+        <link rel="stylesheet" type="text/css" href="static/css/main.css">
+    <!-- Font-icon css-->
+        <link rel="stylesheet" type="text/css" href="static/font/css/font-awesome.min.css">
+        <title>yandi风险平台</title>
+    </head>
+
+    <body>
+        <section class="material-half-bg">
+            <div class="cover"></div>
+        </section>
+
+
+
+<section class="login-content">
+      <div class="logo">
+        <h1>yandi安全风险中心</h1>
+      </div>
+      <div class="login-box">
+        <form class="login-form" action="" method="post">
+          <h3 class="login-head"><i class="fa fa-paper-plane" aria-hidden="true"></i></i>SIGN IN</h3>
+          <div class="form-group">
+            <label class="control-label">USERNAME</label>
+            <input class="form-control" type="text" placeholder="Email" autofocus>
+          </div>
+          <div class="form-group">
+            <label class="control-label">PASSWORD</label>
+            <input class="form-control" name="password" type="password" placeholder="Password">
+          </div>
+          <div class="form-group btn-container">
+            <button class="btn btn-primary btn-block"><i class="fa fa-sign-in fa-lg fa-fw"></i>SIGN IN</button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+
+
+
+
+
+{#        <section class="lockscreen-content">#}
+{#            <div class="lock-box">#}
+{#                <p class="text-center text-muted"><h1></h1></p>#}
+{#                <form class="unlock-form" action="" method="post">#}
+{#                    <h3 class="login-head"><i class="fa fa-lg fa-fw fa-user"></i>yandi SC</h3>#}
+{#          <div class="form-group">#}
+{#            <label class="control-label">USERNAME</label>#}
+{#            <input class="form-control" type="text" placeholder="Email" autofocus>#}
+{#          </div>#}
+{#                    <div class="form-group">#}
+{#                        <label class="control-label">PASSWORD</label>#}
+{#                        <input class="form-control" type="pasword" placeholder="password" name="password">#}
+{#                    </div>#}
+{#                    <div class="form-group btn-container">#}
+{#                        <button class="btn btn-primary btn-block" type="submit"><i class="fa fa-lock fa-lg"></i>Login </button>#}
+{#                    </div>#}
+{#                </form>#}
+{##}
+{#            </div>#}
+{#        </section>#}
+
+        <script src="static/js/jquery/jquery-3.2.1.min.js"></script>
+        <script src="static/js/popper.min.js"></script>
+        <script src="static/js/bootstrap/bootstrap.min.js"></script>
+        <script src="static/js/main.js"></script>
+        <script src="static/js/plugins/pace.min.js"></script>
+        <script src="static/js/plugins/sweetalert/sweetalert.min.js"></script>
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="static/js/gtag.js?id=UA-120816702-1"></script>
+        <script>
+        	window.dataLayer = window.dataLayer || [];
+        	function gtag(){dataLayer.push(arguments);}
+        	gtag('js', new Date());
+        	gtag('config', 'UA-120816702-1');
+    	</script>
+
+        <script>
+            $(function () {
+                $(".login").click(function() {
+                    const data = {
+                        "password": $('[name="password"]').val()
+                    };
+                    $.ajax({
+                      type: "POST",
+                      url: "/login",
+                      data: data,
+                      success: function(e){
+                          if (e === "success") {
+                            swal({
+                                title: "Successfully",
+                                text: "",
+                                type: "success",
+                                timer: 700,
+                                confirmButtonText: "OK",
+                                closeOnConfirm: false
+                            },
+                            function(){
+                                location.href = "/index";
+                            });
+                        } else {
+                            swal({
+                                title: e,
+                                text: "",
+                                type: "error",
+                                confirmButtonColor: "#dd1c14",
+                                confirmButtonText: "Cancel",
+                                closeOnConfirm: false
+                            },
+                            function(){
+                                location.href = "/login";
+                            });
+                        }
+                      }
+                   });
+                });
+            });
+
+        </script>
+    </body>
+</html>

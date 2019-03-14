@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+{% block css %}
+    <link href="static/css/duallistbox/bootstrap-duallistbox.css" rel="stylesheet">
+
+{% endblock %}
+{% block content %}
+
+<main class="app-content">
+    <div class="app-title">
+        <div>
+            <h1><i class="fa fa-edit"></i>TODOLIST</h1>
+        </div>
+        <ul class="app-breadcrumb breadcrumb">
+            <li class="breadcrumb-item"><i class="fa fa-home fa-lg"></i></li>
+            <li class="breadcrumb-item">TODO</li>
+            <li class="breadcrumb-item"><a href="#">TODOLIST</a></li>
+        </ul>
+    </div>
+
+
+
+
+      <div class="col-md-7">
+                <div class="tile">
+                    <div class="tile-body">
+                        <form class="form-horizontal">
+                            <div class="form-group row">
+                                <div >
+                                    <textarea class="form-control" id="todotext" rows="3" placeholder="2020-11-11 xxxxxxx"  style="margin-top: 0px; margin-bottom: 0px; height: 500px; width: 700px">{{ config_info['todotext'] }}</textarea>
+{#                                    <input class="form-control" value="{{ config_info['github_user'] }}" type="text" id="github_user" placeholder="user"/>#}
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="tile-footer"><a class="btn btn-primary update-todo-config" href="#"><i class="fa fa-check-circle"></i> UPDATE</a></div>
+                </div>
+            </div>
+    </div>
+</main>
+
+{% block js %}
+    <script src="static/js/plugins/sweetalert/sweetalert.min.js"></script>
+    <script type="text/javascript" src="static/js/plugins/laydate/laydate.js"></script>
+    <script src="static/js/server/settings.js"></script>
+    <script>
+        laydate.render({
+            elem: '#discovery_time_setting',
+            type: 'time',
+            lang: 'en'
+        });
+    </script>
+
+{% endblock %}
+{% endblock %}
