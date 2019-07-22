@@ -5,7 +5,7 @@
 
 yandi-Scanner 是开源的网络安全检测工具，中小型企业内外网安全自动化扫描器
 
-本系统通过模块化提供多种安全功能继承了fuxi-scanner，在此谢谢作者@fuxi-scanner
+本系统通过模块化提供多种安全功能继承了fuxi-scanner
 
 - 插件漏洞
 - 网络钓鱼
