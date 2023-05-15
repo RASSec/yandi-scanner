@@ -32,3 +32,7 @@ yandi-Scanner 是开源的网络安全检测工具，中小型企业内外网安
 ![4.png](images/4.png)
 ![5.png](images/5.png)
 ![6.png](images/6.png)
+
+## Stargazers over time
+
+[![Stargazers over time](https://starchart.cc/RASSec/yandi-scanner.svg)](https://starchart.cc/RASSec/yandi-scanner)
